@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@layer components {
+  body,
+  .normal {
+    @apply font-sans text-[24px] font-normal;
+  }
+
+  h1,
+  .h1 {
+    @apply font-cursive text-[96px];
+  }
+
+  h2,
+  .h2 {
+    @apply font-sans text-[40px] font-semibold;
+  }
+
+  h3,
+  .h3 {
+    @apply font-sans text-[30px] font-semibold;
+  }
+
+  .subtitle {
+    @apply font-sans text-[24px] font-semibold italic;
+  }
+}
