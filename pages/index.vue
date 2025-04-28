@@ -6,6 +6,7 @@
         fit="cover"
         src="/img/background.png"
         alt="background"
+        format="webp"
         preload
       />
       <div class="absolute top-0 left-0 flex h-full w-full flex-col items-center justify-center">

@@ -22,6 +22,7 @@
       fit="cover"
       preload
       src="/img/background.png"
+      format="webp"
       alt="background"
     />
     <div class="z-10 w-72 text-center text-white">

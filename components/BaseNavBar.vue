@@ -1,7 +1,7 @@
 <template>
   <nav
     id="baseNavBar"
-    class="fixed top-0 left-0 z-10 flex h-24 w-screen items-center justify-center transition-all duration-150 ease-out"
+    class="fixed top-0 left-0 z-10 flex h-24 w-screen items-center justify-center motion-safe:transition-all motion-safe:duration-150 motion-safe:ease-out"
   >
     <NuxtLink to="/">Dự án</NuxtLink>
     <NuxtLink to="/explore">Khám phá</NuxtLink>
