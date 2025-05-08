@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxtjs/sanity',
+    '@pinia/nuxt',
   ],
 
   app: {
@@ -26,16 +27,17 @@ export default defineNuxtConfig({
 
   image: {
     format: ['webp', 'avif'],
-    sanity: {
-      projectId: process.env.SANITY_PROJECT_ID,
-      dataset: process.env.SANITY_DATASET,
-    },
+    domains: ['cdn.sanity.io'],
   },
 
   icon: {
     serverBundle: {
       collections: ['lucide'],
     },
+  },
+
+  imports: {
+    dirs: ['types'],
   },
 
   sanity: {

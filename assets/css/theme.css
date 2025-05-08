@@ -3,6 +3,7 @@
 @theme {
   --font-sans: 'Inter', sans-serif;
   --font-cursive: 'Playwrite US Trad';
+  --font-playfair: 'Playfair Display SC';
 
   --color-primary-1: #3c552d;
   --color-primary-2: #8e1616;
