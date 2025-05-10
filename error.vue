@@ -21,11 +21,11 @@
       class="absolute top-0 left-0 h-full w-full object-cover"
       fit="cover"
       preload
-      src="/img/background.png"
+      src="/img/first-section-background.png"
       format="webp"
       alt="background"
     />
-    <div class="z-10 w-72 text-center text-white">
+    <div class="z-10 w-2/3 text-white">
       <h1>{{ error?.statusCode }}</h1>
       <div>{{ error?.message }}</div>
       <button class="cursor-pointer hover:underline" @click="handleError">

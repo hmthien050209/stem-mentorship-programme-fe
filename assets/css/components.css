@@ -8,7 +8,7 @@
 
   h1,
   .h1 {
-    @apply font-cursive text-[96px];
+    @apply font-playfair text-[110px];
   }
 
   h2,
@@ -23,5 +23,9 @@
 
   .subtitle {
     @apply font-sans text-[24px] font-semibold italic;
+  }
+
+  body {
+    @apply scroll-smooth;
   }
 }
