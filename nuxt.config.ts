@@ -16,15 +16,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
 
-  app: {
-    pageTransition: {
-      name: 'fade',
-    },
-    layoutTransition: {
-      name: 'fade',
-    },
-  },
-
   image: {
     format: ['webp', 'avif'],
     domains: ['cdn.sanity.io'],
@@ -42,7 +33,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': {
-      static: true,
+      prerender: true,
     },
   },
 

@@ -32,7 +32,7 @@ export function registerChartJs() {
   Chart.defaults.font.family = 'Inter'
 
   // Colors
-  Chart.defaults.backgroundColor = ['#22882D', '#FBBB35', '#0070C0', '#7030A0', '#B21414']
+  Chart.defaults.backgroundColor = ['#FBBB35', '#B21414', '#22882D', '#7030A0', '#0070C0']
   Chart.defaults.color = '#ffffff'
 
   // Border

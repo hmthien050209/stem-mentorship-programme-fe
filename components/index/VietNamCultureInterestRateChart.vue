@@ -8,16 +8,12 @@
 
   const data: Data[] = [
     {
-      name: 'Âm nhạc',
-      value: 20,
-    },
-    {
       name: 'Lễ hội',
       value: 22,
     },
     {
-      name: 'Ẩm thực',
-      value: 13,
+      name: 'Âm nhạc',
+      value: 20,
     },
     {
       name: 'Mỹ thuật',
@@ -26,6 +22,10 @@
     {
       name: 'Kiến trúc',
       value: 28,
+    },
+    {
+      name: 'Ẩm thực',
+      value: 13,
     },
   ]
 

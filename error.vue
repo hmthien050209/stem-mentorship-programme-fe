@@ -13,19 +13,20 @@
   })
 
   const handleError = () => clearError({ redirect: '/' })
+
+  const image = useImage()
+  const backgroundUrl = image('/img/first-section-background.png', {
+    format: 'webp',
+    fit: 'cover',
+  })
 </script>
 
 <template>
-  <div class="relative flex h-screen w-screen items-center justify-center">
-    <NuxtImg
-      class="absolute top-0 left-0 h-full w-full object-cover"
-      fit="cover"
-      preload
-      src="/img/first-section-background.png"
-      format="webp"
-      alt="background"
-    />
-    <div class="z-10 w-2/3 text-white">
+  <div
+    class="flex h-screen w-screen items-center justify-center bg-cover"
+    :style="`background-image: url(${backgroundUrl})`"
+  >
+    <div class="w-2/3 text-white">
       <h1>{{ error?.statusCode }}</h1>
       <div>{{ error?.message }}</div>
       <button class="cursor-pointer hover:underline" @click="handleError">

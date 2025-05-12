@@ -13,7 +13,7 @@
   // Second section animation
   const secondSection = useTemplateRef('secondSection')
   const secondSectionVisible = useElementVisibility(secondSection, {
-    rootMargin: '30%',
+    rootMargin: '-25%',
   })
   watch(
     secondSectionVisible,
@@ -27,22 +27,18 @@
 
   // Third section animation
   const thirdFirst = useTemplateRef('thirdFirst')
-  const thirdFirstVisible = useElementVisibility(thirdFirst, {
-    rootMargin: '30%',
+  const _thirdFirstVisible = useElementVisibility(thirdFirst, {
+    rootMargin: '-25%',
   })
-  watch(
-    thirdFirstVisible,
-    (val) => {
-      if (val) {
-        waapi.animate('#_3_1 > *', animation)
-      }
-    },
-    { once: true },
-  )
+  const thirdFirstVisible = refThrottled(_thirdFirstVisible, 1000)
+
+  watchEffect(() => {
+    console.log(thirdFirstVisible.value)
+  })
 
   const thirdSecond = useTemplateRef('thirdSecond')
   const thirdSecondVisible = useElementVisibility(thirdSecond, {
-    rootMargin: '30%',
+    rootMargin: '-25%',
   })
   watch(
     thirdSecondVisible,
@@ -75,13 +71,11 @@
       ref="firstSection"
       class="relative h-screen w-screen overflow-hidden"
     >
-      <NuxtImg
-        class="h-full w-full object-cover"
-        fit="cover"
+      <NuxtPicture
         src="/img/first-section-background.png"
-        alt="background"
-        format="webp"
-        preload
+        :img-attrs="{
+          class: 'h-full w-full object-cover',
+        }"
       />
       <div class="absolute bottom-32 left-24 flex w-3/4 flex-col leading-relaxed">
         <h1>THANH SẮC VIỆT</h1>
@@ -115,7 +109,7 @@
 
       <div class="mt-24 grid h-full grid-cols-2 grid-rows-1 gap-8">
         <div class="box">
-          <LazyNuxtImg src="/img/target.svg" class="w-20" />
+          <LazyNuxtImg src="/img/target.svg" class="w-20" alt="target icon" />
           <h3>MỤC TIÊU DÀI HẠN</h3>
           <div class="text-center">
             Mang âm nhạc dân tộc đến gần hơn với thế hệ trẻ qua cách tiếp cận hiện đại và truyền cảm
@@ -123,7 +117,7 @@
           </div>
         </div>
         <div class="box">
-          <LazyNuxtImg src="/img/people.svg" class="w-20" />
+          <LazyNuxtImg src="/img/people.svg" class="w-20" alt="people icon" />
           <h3>ĐỐI TƯỢNG</h3>
           <div class="text-center">
             Học sinh - sinh viên (15 - 25 tuổi) mong muốn tìm hiểu hơn về văn hoá và truyền thống
@@ -138,9 +132,9 @@
       ref="thirdSection"
       class="flex h-[1535px] w-screen flex-col bg-[url('/img/third-section-background.svg')] bg-cover"
     >
-      <LazyClientOnly>
-        <IndexCharts id="_3_1" ref="thirdFirst" />
-      </LazyClientOnly>
+      <ClientOnly>
+        <LazyIndexCharts id="_3_1" ref="thirdFirst" :visible="thirdFirstVisible" />
+      </ClientOnly>
       <div
         id="_3_2"
         ref="thirdSecond"
@@ -201,7 +195,7 @@
   }
 
   #secondSection > *,
-  #thirdSection > div > *,
+  #_3_2 > *,
   #fourthSection > * {
     @apply opacity-0;
   }

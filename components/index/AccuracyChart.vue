@@ -9,19 +9,14 @@
 
   const data: Data[] = [
     {
-      name: 'Âm nhạc',
-      correct: 30,
-      incorrect: 70,
-    },
-    {
-      name: 'Lễ hội',
-      correct: 34,
-      incorrect: 66,
-    },
-    {
       name: 'Ẩm thực',
       correct: 70,
       incorrect: 30,
+    },
+    {
+      name: 'Âm nhạc',
+      correct: 30,
+      incorrect: 70,
     },
     {
       name: 'Mỹ thuật',
@@ -32,6 +27,11 @@
       name: 'Kiến trúc',
       correct: 40,
       incorrect: 60,
+    },
+    {
+      name: 'Lễ hội',
+      correct: 34,
+      incorrect: 66,
     },
   ]
 
