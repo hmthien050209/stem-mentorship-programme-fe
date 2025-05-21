@@ -5,7 +5,7 @@
     <div class="col-span-1 flex flex-col">
       <div class="text-lg font-bold">Liên kết nhanh</div>
       <NuxtLink to="/">Dự án</NuxtLink>
-      <NuxtLink to="/explore">Khám phá</NuxtLink>
+      <NuxtLink to="/#fourthSection">Khám phá</NuxtLink>
       <NuxtLink to="/about">Về chúng tôi</NuxtLink>
     </div>
     <div class="col-span-2 flex flex-col">

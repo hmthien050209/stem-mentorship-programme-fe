@@ -1,14 +1,12 @@
 <script setup lang="ts">
-  import { stagger, waapi } from 'animejs'
+  import { animate } from 'animejs'
 
-  // const query = groq`*[_type == 'information'][0..6] | order(_createdAt desc){title, slug{current}, image{asset->{url}}}`
-  // const { data: posts, refresh: _refresh } = await useLazySanityQuery<PostInfo[]>(query)
+  const router = useRouter()
 
-  const animation = {
-    opacity: [0, 1],
-    translateY: ['100%', '0%'],
-    delay: stagger(200, { start: 500 }),
-  }
+  // First section animation
+  onMounted(() => {
+    animate('#_1_1 > *', DEFAULT_ANIMATION)
+  })
 
   // Second section animation
   const secondSection = useTemplateRef('secondSection')
@@ -19,7 +17,7 @@
     secondSectionVisible,
     (val) => {
       if (val) {
-        waapi.animate('#secondSection > *', animation)
+        animate('#secondSection > *', DEFAULT_ANIMATION)
       }
     },
     { once: true },
@@ -32,10 +30,6 @@
   })
   const thirdFirstVisible = refThrottled(_thirdFirstVisible, 1000)
 
-  watchEffect(() => {
-    console.log(thirdFirstVisible.value)
-  })
-
   const thirdSecond = useTemplateRef('thirdSecond')
   const thirdSecondVisible = useElementVisibility(thirdSecond, {
     rootMargin: '-25%',
@@ -44,7 +38,7 @@
     thirdSecondVisible,
     (val) => {
       if (val) {
-        waapi.animate('#_3_2 > *', animation)
+        animate('#_3_2 > *', DEFAULT_ANIMATION)
       }
     },
     { once: true },
@@ -57,11 +51,18 @@
     fourthSectionVisible,
     (val) => {
       if (val) {
-        waapi.animate('#fourthSection > *', animation)
+        animate('#fourthSection > *', DEFAULT_ANIMATION)
       }
     },
     { once: true },
   )
+
+  // Workaround for the "discover" section navigation issue when navigating from another pages
+  watchEffect(() => {
+    if (router.currentRoute.value.hash === '#fourthSection') {
+      fourthSection.value?.scrollIntoView({ behavior: 'smooth' })
+    }
+  })
 </script>
 
 <template>
@@ -76,8 +77,10 @@
         :img-attrs="{
           class: 'h-full w-full object-cover',
         }"
+        placeholder
+        preload
       />
-      <div class="absolute bottom-32 left-24 flex w-3/4 flex-col leading-relaxed">
+      <div id="_1_1" class="absolute bottom-32 left-24 flex w-3/4 flex-col leading-relaxed">
         <h1>THANH SẮC VIỆT</h1>
         <div class="subtitle">
           "Một không gian số khám phá văn hóa Việt Nam qua lăng kính hiện đại <br />
@@ -85,7 +88,7 @@
           lọc và lan toả”
         </div>
       </div>
-      <div class="absolute bottom-0 left-0 flex h-32 w-full items-center justify-center">
+      <div id="_1_2" class="absolute bottom-0 left-0 flex h-32 w-full items-center justify-center">
         <LazyScrollDown />
       </div>
     </section>
@@ -194,6 +197,7 @@
     @apply flex flex-col items-center justify-center gap-4 bg-white p-8 text-black;
   }
 
+  #_1_1 > *,
   #secondSection > *,
   #_3_2 > *,
   #fourthSection > * {
