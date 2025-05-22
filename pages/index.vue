@@ -1,27 +1,13 @@
 <script setup lang="ts">
-  import { animate } from 'animejs'
+  import { waapi } from 'animejs'
 
   const router = useRouter()
-
-  // First section animation
-  onMounted(() => {
-    animate('#_1_1 > *', DEFAULT_ANIMATION)
-  })
 
   // Second section animation
   const secondSection = useTemplateRef('secondSection')
   const secondSectionVisible = useElementVisibility(secondSection, {
     rootMargin: '-25%',
   })
-  watch(
-    secondSectionVisible,
-    (val) => {
-      if (val) {
-        animate('#secondSection > *', DEFAULT_ANIMATION)
-      }
-    },
-    { once: true },
-  )
 
   // Third section animation
   const thirdFirst = useTemplateRef('thirdFirst')
@@ -34,33 +20,49 @@
   const thirdSecondVisible = useElementVisibility(thirdSecond, {
     rootMargin: '-25%',
   })
-  watch(
-    thirdSecondVisible,
-    (val) => {
-      if (val) {
-        animate('#_3_2 > *', DEFAULT_ANIMATION)
-      }
-    },
-    { once: true },
-  )
 
   // Fourth section animation
   const fourthSection = useTemplateRef('fourthSection')
   const fourthSectionVisible = useElementVisibility(fourthSection)
-  watch(
-    fourthSectionVisible,
-    (val) => {
-      if (val) {
-        animate('#fourthSection > *', DEFAULT_ANIMATION)
-      }
-    },
-    { once: true },
-  )
 
-  // Workaround for the "discover" section navigation issue when navigating from another pages
-  watchEffect(() => {
+  onMounted(() => {
+    // First section animation
+    waapi.animate('#_1_1 > *', defaultAnimation)
+
+    watch(
+      secondSectionVisible,
+      (val) => {
+        if (val) {
+          waapi.animate('#secondSection > *', defaultAnimation)
+        }
+      },
+      { once: true },
+    )
+
+    watch(
+      thirdSecondVisible,
+      (val) => {
+        if (val) {
+          waapi.animate('#_3_2 > *', defaultAnimation)
+        }
+      },
+      { once: true },
+    )
+
+    watch(
+      fourthSectionVisible,
+      (val) => {
+        if (val) {
+          waapi.animate('#fourthSection > *', defaultAnimation)
+        }
+      },
+      { once: true },
+    )
+  })
+
+  useRuntimeHook('page:finish', () => {
     if (router.currentRoute.value.hash === '#fourthSection') {
-      fourthSection.value?.scrollIntoView({ behavior: 'smooth' })
+      fourthSection.value?.scrollIntoView()
     }
   })
 </script>
@@ -76,6 +78,7 @@
         src="/img/first-section-background.png"
         :img-attrs="{
           class: 'h-full w-full object-cover',
+          alt: 'background',
         }"
         placeholder
         preload
@@ -183,7 +186,7 @@
     >
       <div class="grid w-full grid-cols-3">
         <div class="mr-8 flex-1 border-b-3 border-b-white" />
-        <h1 class="text-8xl">KHÁM PHÁ</h1>
+        <h1 class="text-center text-7xl">KHÁM PHÁ</h1>
         <div class="ml-8 flex-1 border-b-3 border-b-white" />
       </div>
     </section>

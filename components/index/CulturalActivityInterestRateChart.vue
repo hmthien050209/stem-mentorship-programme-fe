@@ -1,12 +1,7 @@
 <script setup lang="ts">
   import { Chart } from 'chart.js'
 
-  type Data = {
-    name: string
-    value: number
-  }
-
-  const data: Data[] = [
+  const data: ActivityInterestRateData[] = [
     {
       name: 'Không/ít quan tâm đến các hoạt động về văn hoá',
       value: 25,

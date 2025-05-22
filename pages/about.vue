@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { animate } from 'animejs'
+  import { waapi } from 'animejs'
 
   useHead({
     title: 'Về chúng tôi',
@@ -8,51 +8,54 @@
   const image = useImage()
   const backgroundUrl = image('/img/about-us-background.svg', { fit: 'cover' })
 
-  onMounted(() => {
-    animate('#firstSection > div > *', DEFAULT_ANIMATION)
-  })
-
   const ref1 = useTemplateRef('_2_1')
   const ref1Visible = useElementVisibility(ref1, {
     rootMargin: '-10%',
   })
-  watch(
-    ref1Visible,
-    (val) => {
-      if (val) {
-        animate('#_2_1 > *', DEFAULT_ANIMATION)
-      }
-    },
-    { once: true },
-  )
 
   const ref2 = useTemplateRef('_2_2')
   const ref2Visible = useElementVisibility(ref2, {
     rootMargin: '-10%',
   })
-  watch(
-    ref2Visible,
-    (val) => {
-      if (val) {
-        animate('#_2_2 > *', DEFAULT_ANIMATION)
-      }
-    },
-    { once: true },
-  )
 
   const ref3 = useTemplateRef('_2_3')
   const ref3Visible = useElementVisibility(ref3, {
     rootMargin: '-10%',
   })
-  watch(
-    ref3Visible,
-    (val) => {
-      if (val) {
-        animate('#_2_3 > *', DEFAULT_ANIMATION)
-      }
-    },
-    { once: true },
-  )
+
+  onMounted(() => {
+    waapi.animate('#firstSection > div > *', defaultAnimation)
+
+    watch(
+      ref1Visible,
+      (val) => {
+        if (val && import.meta.client) {
+          waapi.animate('#_2_1 > *', defaultAnimation)
+        }
+      },
+      { once: true },
+    )
+
+    watch(
+      ref2Visible,
+      (val) => {
+        if (val && import.meta.client) {
+          waapi.animate('#_2_2 > *', defaultAnimation)
+        }
+      },
+      { once: true },
+    )
+
+    watch(
+      ref3Visible,
+      (val) => {
+        if (val && import.meta.client) {
+          waapi.animate('#_2_3 > *', defaultAnimation)
+        }
+      },
+      { once: true },
+    )
+  })
 </script>
 
 <template>

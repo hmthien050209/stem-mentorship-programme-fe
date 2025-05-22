@@ -1,12 +1,7 @@
 <script setup lang="ts">
   import { Chart } from 'chart.js'
 
-  type Data = {
-    name: string
-    value: number
-  }
-
-  const data: Data[] = [
+  const data: DemandData[] = [
     {
       name: 'Âm nhạc',
       value: 27,

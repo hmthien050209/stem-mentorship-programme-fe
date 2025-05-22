@@ -4,7 +4,6 @@
     <main>
       <slot />
     </main>
-    <LazyBaseFooter hydrate-on-idle />
+    <LazyBaseFooter />
   </div>
 </template>
-<script setup lang="ts"></script>

@@ -7,15 +7,18 @@
     },
   })
 
-  const breakpoints = useBreakpoints(breakpointsTailwind)
-  const mdAndSmaller = breakpoints.smallerOrEqual('md')
+  const breakpoints = useBreakpoints(breakpointsTailwind, { ssrWidth: 1024 })
+  const isSmallerThanLg = breakpoints.smaller('lg')
 </script>
 
 <template>
-  <SuitableScreen v-if="mdAndSmaller" />
-  <NuxtLayout v-else>
-    <NuxtPage />
-  </NuxtLayout>
+  <div class="relative">
+    <SuitableScreen v-if="isSmallerThanLg" />
+
+    <NuxtLayout v-else>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
 
 <style>

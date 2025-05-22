@@ -1,13 +1,7 @@
 <script setup lang="ts">
   import { Chart } from 'chart.js'
 
-  type Data = {
-    name: string
-    correct: number
-    incorrect: number
-  }
-
-  const data: Data[] = [
+  const data: AccuracyData[] = [
     {
       name: 'Ẩm thực',
       correct: 70,

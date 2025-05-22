@@ -1,6 +1,5 @@
 <template>
   <nav
-    ref="nav"
     class="absolute top-0 left-0 z-10 flex h-32 w-screen items-center justify-end px-12 text-white motion-safe:transition-all motion-safe:duration-150 motion-safe:ease-out"
   >
     <NuxtLink to="/" class="px-6">Dự án</NuxtLink>

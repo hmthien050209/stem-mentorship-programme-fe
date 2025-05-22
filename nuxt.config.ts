@@ -6,6 +6,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
 
+  // Nuxt is not working well on the latest version unless we disable SSR
+  // (we don't know the original cause yet, our assumption is that we've tried to modify the DOM
+  // improperly, but we aren't)
+  // The most relevant GitHub issue is https://github.com/nuxt/nuxt/issues/32178
+  ssr: false,
+
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
@@ -13,7 +19,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxtjs/sanity',
-    '@pinia/nuxt',
   ],
 
   app: {
@@ -36,11 +41,14 @@ export default defineNuxtConfig({
     dirs: ['types'],
   },
 
-  routeRules: {
-    '/*': {
-      prerender: true,
-    },
-  },
+  // routeRules: {
+  //   '/**': {
+  //     prerender: true,
+  //   },
+  //   '/info/**': {
+  //     prerender: true,
+  //   },
+  // },
 
   sanity: {
     projectId: process.env.SANITY_PROJECT_ID,

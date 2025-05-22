@@ -4,8 +4,5 @@
   "singleQuote": true,
   "printWidth": 100,
   "vueIndentScriptAndStyle": true,
-  "importOrder": ["<THIRD_PARTY_MODULES>", "^vue*", "^@vue*", "^pinia", "^@/", "^[..]/", "^[.]/"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
-  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"]
+  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"]
 }
