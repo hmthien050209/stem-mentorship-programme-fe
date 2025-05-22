@@ -6,7 +6,6 @@
   })
 
   const image = useImage()
-  const backgroundUrl = image('/img/about-us-background.svg', { fit: 'cover' })
 
   const ref1 = useTemplateRef('_2_1')
   const ref1Visible = useElementVisibility(ref1, {
@@ -59,7 +58,13 @@
 </script>
 
 <template>
-  <div class="w-screen bg-cover" :style="`background-image: url(${backgroundUrl});`">
+  <div class="relative w-screen">
+    <NuxtPicture
+      src="/img/about-us-background.svg"
+      :img-attrs="{ class: 'h-full w-full object-cover absolute top-0 left-0', alt: 'background' }"
+      :placeholder="image('/img/about-us-background.svg', { blur: 5 })"
+      preload
+    />
     <section id="firstSection" class="relative h-screen w-screen">
       <div class="absolute right-20 bottom-20 flex flex-col px-8 text-white">
         <h1 class="text-right">VỀ CHÚNG TÔI</h1>
