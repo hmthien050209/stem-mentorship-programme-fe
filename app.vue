@@ -5,6 +5,9 @@
     titleTemplate: (page) => {
       return page ? `${page} | Thanh Sắc Việt` : 'Thanh Sắc Việt'
     },
+    htmlAttrs: {
+      lang: 'vi',
+    },
   })
 
   const breakpoints = useBreakpoints(breakpointsTailwind, { ssrWidth: 1024 })

@@ -38,7 +38,7 @@
       />
       <div class="z-10 grid w-[85%] grid-cols-1 grid-rows-2 gap-10">
         <div class="justify-begin flex w-full flex-row items-center gap-10">
-          <LazyNuxtImg src="/img/position.svg" class="h-32 w-32" />
+          <LazyNuxtImg src="/img/position.svg" class="h-32 w-32" alt="position icon" />
           <div class="flex flex-col gap-2">
             <div class="text-3xl font-bold">GIỚI THIỆU CHUNG</div>
             <p>
@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="justify-begin flex w-full flex-row items-center gap-10">
-          <LazyNuxtImg src="/img/unesco.svg" class="h-32 w-32" />
+          <LazyNuxtImg src="/img/unesco.svg" class="h-32 w-32" alt="unesco icon" />
           <div class="flex flex-col gap-2">
             <div class="text-3xl font-bold">DI SẢN VĂN HOÁ PHI VẬT THỂ ĐẠI DIỆN CỦA NHÂN LOẠI</div>
             <p>Được UNESCO công nhận năm 2009</p>
