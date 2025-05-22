@@ -59,10 +59,13 @@
 
 <template>
   <div class="relative w-screen">
-    <NuxtPicture
+    <NuxtImg
       src="/img/about-us-background.svg"
-      :img-attrs="{ class: 'h-full w-full object-cover absolute top-0 left-0', alt: 'background' }"
-      :placeholder="image('/img/about-us-background.svg', { blur: 5 })"
+      class="absolute top-0 left-0 h-full w-full object-cover"
+      alt="background"
+      :placeholder="
+        image('/img/about-us-background.svg', { blur: 20, format: 'webp', width: 160, height: 353 })
+      "
       preload
     />
     <section id="firstSection" class="relative h-screen w-screen">

@@ -12,14 +12,19 @@
 <template>
   <div class="w-full bg-[#100D08] text-white">
     <section class="relative h-screen w-screen">
-      <NuxtPicture
+      <NuxtImg
         src="/img/dan-ca-quan-ho-background.svg"
         fit="cover"
-        :img-attrs="{
-          class: 'h-full w-full object-cover',
-          alt: 'background',
-        }"
-        placeholder
+        class="h-full w-full object-cover"
+        alt="background"
+        :placeholder="
+          image('/img/dan-ca-quan-ho-background.svg', {
+            blur: 20,
+            format: 'webp',
+            width: 205,
+            height: 128,
+          })
+        "
         preload
       />
 
@@ -59,14 +64,19 @@
     </section>
 
     <section class="relative">
-      <NuxtPicture
+      <NuxtImg
         src="/img/dan-ca-quan-ho-costume.svg"
         fit="cover"
-        :img-attrs="{
-          class: 'h-full w-full object-cover',
-          alt: 'the costume of dan ca quan ho',
-        }"
-        placeholder
+        class="h-full w-full object-cover"
+        alt="the costume of dan ca quan ho"
+        :placeholder="
+          image('/img/dan-ca-quan-ho-costume.svg', {
+            blur: 20,
+            format: 'webp',
+            width: 96 * 2,
+            height: 71 * 2,
+          })
+        "
         preload
       />
       <div class="absolute top-10 left-0 w-full">
@@ -81,14 +91,19 @@
     </section>
 
     <section>
-      <NuxtPicture
+      <NuxtImg
         src="/img/dan-ca-quan-ho-more-info.svg"
         fit="cover"
-        :img-attrs="{
-          class: 'h-full w-full object-cover',
-          alt: 'more info',
-        }"
-        placeholder
+        class="h-full w-full object-cover"
+        alt="more info"
+        :placeholder="
+          image('/img/dan-ca-quan-ho-more-info.svg', {
+            blur: 20,
+            format: 'webp',
+            width: 96 * 2,
+            height: 83 * 2,
+          })
+        "
         preload
       />
     </section>

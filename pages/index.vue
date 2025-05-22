@@ -74,12 +74,10 @@
       ref="firstSection"
       class="relative h-screen w-screen overflow-hidden"
     >
-      <NuxtPicture
+      <NuxtImg
         src="/img/first-section-background.png"
-        :img-attrs="{
-          class: 'h-full w-full object-cover',
-          alt: 'background',
-        }"
+        class="h-full w-full object-cover"
+        alt="background"
         placeholder
         preload
       />
