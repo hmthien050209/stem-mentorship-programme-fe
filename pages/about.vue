@@ -22,7 +22,8 @@
     rootMargin: '-10%',
   })
 
-  onMounted(() => {
+  onMounted(async () => {
+    await nextTick()
     waapi.animate('#firstSection > div > *', defaultAnimation)
 
     watch(

@@ -25,7 +25,8 @@
   const fourthSection = useTemplateRef('fourthSection')
   const fourthSectionVisible = useElementVisibility(fourthSection)
 
-  onMounted(() => {
+  onMounted(async () => {
+    await nextTick()
     // First section animation
     waapi.animate('#_1_1 > *', defaultAnimation)
 
@@ -60,11 +61,21 @@
     )
   })
 
-  useRuntimeHook('page:finish', () => {
-    if (router.currentRoute.value.hash === '#fourthSection') {
-      fourthSection.value?.scrollIntoView()
-    }
-  })
+  // Workaround the fourth section navigation issue
+  // This is hacky!
+  watch(
+    router.currentRoute,
+    (val) => {
+      if (val.hash) {
+        // The transition runs for 300 ms, we add a 50 ms delay before trying to access the DOM element
+        setTimeout(() => {
+          const el = document.querySelector(val.hash)
+          el?.scrollIntoView({ behavior: 'smooth' })
+        }, 350)
+      }
+    },
+    { immediate: true },
+  )
 </script>
 
 <template>
