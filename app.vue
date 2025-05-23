@@ -8,6 +8,7 @@
     htmlAttrs: {
       lang: 'vi',
     },
+    link: [{ rel: 'icon', type: 'image/svg', href: '/favicon.svg' }],
   })
 
   const breakpoints = useBreakpoints(breakpointsTailwind, { ssrWidth: 1024 })
