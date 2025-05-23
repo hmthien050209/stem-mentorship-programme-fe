@@ -142,7 +142,7 @@
         <div class="grid grid-cols-2 grid-rows-2 gap-12">
           <iframe
             class="aspect-video w-full"
-            src="https://www.youtube.com/embed/zxmtDUd04L8?si=lKoCLYdW-AoN-kfo"
+            src="https://www.youtube.com/embed/zxmtDUd04L8"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -168,7 +168,7 @@
           </div>
           <iframe
             class="aspect-video w-full"
-            src="https://www.youtube.com/embed/BCa80cvImyw?si=_3h0VmsnFV6UpQDW"
+            src="https://www.youtube.com/embed/BCa80cvImyw"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
