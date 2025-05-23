@@ -33,7 +33,9 @@
           <div class="absolute top-0 right-10">DÂN CA</div>
           <span class="absolute bottom-0 left-0"><span class="text-[300px]">Q</span>UAN HỌ</span>
         </div>
-        <div class="title italic">“Lời ca từ bến sông Kinh Bắc, vang vọng tình người tình quê”</div>
+        <div class="title font-bold italic">
+          “Lời ca từ bến sông Kinh Bắc, vang vọng tình người tình quê”
+        </div>
       </div>
     </section>
 
@@ -47,17 +49,18 @@
           <div class="flex flex-col gap-2">
             <div class="text-3xl font-bold">GIỚI THIỆU CHUNG</div>
             <p>
-              Dân ca quan họ một loại hình âm nhạc đặc trưng của khu vực châu thổ sông Hồng, hình
-              thành và phát triển từ vùng văn hoá Kinh Bắc (Bắc Ninh, Bắc Giang, cùng một số nơi như
-              Lạng Sơn, Hưng Yên và Hà Nội).
+              Nhã nhạc cung đình có nguồn gốc từ Trung Quốc, dưới thời Chu (thế kỉ VI – III TCN),
+              sau đó loại hình âm nhạc này mới du nhập vào Việt Nam từ thời Lý, biến thể và phát
+              triển qua các triều đại Trần, Lê, Tây Sơn, rực rỡ nhất thời Nguyễn và thành Nhã nhạc
+              cung đình Huế sau này.
             </p>
           </div>
         </div>
         <div class="justify-begin flex w-full flex-row items-center gap-10">
           <LazyNuxtImg src="/img/unesco.svg" class="h-32 w-32" alt="unesco icon" />
           <div class="flex flex-col gap-2">
-            <div class="text-3xl font-bold">DI SẢN VĂN HOÁ PHI VẬT THỂ ĐẠI DIỆN CỦA NHÂN LOẠI</div>
-            <p>Được UNESCO công nhận năm 2009</p>
+            <div class="text-3xl font-bold">DI SẢN PHI VẬT THỂ & TRUYỀN KHẨU CỦA NHÂN LOẠI</div>
+            <p>Được UNESCO công nhận năm 2003</p>
           </div>
         </div>
       </div>
@@ -173,23 +176,7 @@
           />
         </div>
 
-        <div>
-          <h1>Ý NGHĨA</h1>
-          <ul>
-            <li>
-              Âm nhạc truyền thống chính là nơi lưu giữ những giá trị di sản quý báu từ bao đời ,
-              đóng vai trò vô cùng quan trọng trong việc bảo tồn và phát huy bản sắc văn hoá dân
-              tộc. Âm nhạc truyền thống không chỉ mang giá trị giải trí mà còn chứa đựng những giá
-              trị lịch sử lâu dài, ngôn ngữ đặc trưng và phong tục tập quán độc đáo.
-            </li>
-            <li>
-              Nền tảng tạo nên sự giao thoa văn hoá độc đáo, đa dạng với bạn bè quốc tế: Giữ gìn và
-              bảo tồn âm nhạc truyền thống Việt Nam chính là nền tảng để phát triển và quảng bá âm
-              nhạc truyền thống Việt Nam đến với bạn bè quốc tế. Từ đó nâng cao hình ảnh văn hoá
-              Việt Nam, phát triển và hòa nhập xu hướng toàn cầu.
-            </li>
-          </ul>
-        </div>
+        <InfoMeaning />
       </div>
     </section>
   </div>
