@@ -89,6 +89,7 @@
         src="/img/first-section-background.png"
         class="h-full w-full object-cover"
         alt="background"
+        format="webp"
         placeholder
         preload
       />
@@ -198,6 +199,79 @@
         <h1 class="text-center text-7xl">KHÁM PHÁ</h1>
         <div class="ml-8 flex-1 border-b-3 border-b-white" />
       </div>
+
+      <div class="grid h-full w-full grid-cols-3 grid-rows-1 gap-10 p-16">
+        <NuxtLink to="/info/dan-ca-quan-ho" class="info-box">
+          <LazyNuxtImg
+            src="/img/dan-ca-quan-ho-hero.png"
+            format="webp"
+            class="h-1/2 object-cover"
+            placeholder
+          />
+          <div
+            class="absolute top-[20%] left-0 h-1/3 w-full bg-gradient-to-t from-[#100D08] from-30% to-transparent"
+          />
+
+          <div
+            class="absolute right-0 bottom-0 z-10 flex h-1/2 w-full flex-col items-center justify-center p-12 text-justify"
+          >
+            <div class="font-playfair relative h-[160px] w-11/12 text-[52px]">
+              <div class="absolute top-0 right-10">DÂN CA</div>
+              <span class="absolute bottom-0 left-0"
+                ><span class="text-[116px]">Q</span>UAN HỌ</span
+              >
+            </div>
+            <div class="title italic">
+              “Lời ca từ bến sông Kinh Bắc, vang vọng tình người tình quê”
+            </div>
+          </div>
+        </NuxtLink>
+
+        <NuxtLink to="/info/nha-nhac-cung-dinh" class="info-box">
+          <div class="z-20 mx-auto flex w-11/12 flex-col items-center justify-center text-center">
+            <span class="font-playfair text-[60px] leading-none">
+              <span class="text-[116px]">N</span><span class="text-[52px]">HÃ NHẠC</span> <br />
+              CUNG ĐÌNH
+            </span>
+            <div class="title italic">“Tinh hoa âm nhạc cung đình giữa lòng di sản Huế”</div>
+          </div>
+
+          <div
+            class="absolute bottom-[20%] left-0 z-10 h-1/3 w-full bg-gradient-to-b from-[#100D08] from-35% to-transparent"
+          />
+
+          <LazyNuxtImg
+            src="/img/nha-nhac-cung-dinh-hero.png"
+            format="webp"
+            class="absolute bottom-0 left-0 h-1/2 object-cover"
+            placeholder
+          />
+        </NuxtLink>
+
+        <NuxtLink to="/info/don-ca-tai-tu" class="info-box">
+          <LazyNuxtImg
+            src="/img/don-ca-tai-tu-hero.png"
+            format="webp"
+            class="h-1/2 object-cover"
+            placeholder
+          />
+          <div
+            class="absolute top-[20%] left-0 h-1/3 w-full bg-gradient-to-t from-[#100D08] to-transparent to-95%"
+          />
+
+          <div
+            class="absolute right-0 bottom-0 z-10 flex h-1/2 w-full flex-col items-center justify-center p-8 text-justify"
+          >
+            <div class="font-playfair relative h-52 w-80 text-[52px]">
+              <span class="absolute top-0 left-0 text-[60px]"
+                ><span class="text-[116px]">Đ</span>ỜN CA</span
+              >
+              <div class="absolute right-0 bottom-0">TÀI TỬ</div>
+            </div>
+            <div class="title italic">“Thanh âm mộc mạc vang vọng từ đất phương Nam”</div>
+          </div>
+        </NuxtLink>
+      </div>
     </section>
   </div>
 </template>
@@ -214,5 +288,9 @@
   #_3_2 > *,
   #fourthSection > * {
     @apply opacity-0;
+  }
+
+  .info-box {
+    @apply relative flex h-full w-full flex-col border border-white bg-[#100D08] transition-all duration-300 ease-out hover:scale-105;
   }
 </style>
