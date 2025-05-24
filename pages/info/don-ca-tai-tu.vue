@@ -162,7 +162,7 @@
             </p>
           </div>
           <div>
-            <p class="text-right text-3xl font-bold">BÌNH BÁN VĂN</p>
+            <p class="text-right text-3xl font-bold">BÌNH BÁN VẮN</p>
             <p class="text-justify">
               Bình bán vắn là một trong những bài nhỏ thuộc họ Bắc trong ca nhạc tài tử miền Nam,
               xuất xứ từ ca nhạc Huế. Bình bán vắn tức là bản nhạc ngắn, câu chữ, nhịp thức cũng đều

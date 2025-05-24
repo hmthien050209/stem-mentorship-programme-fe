@@ -158,6 +158,14 @@
           </div>
           <div>
             <p class="text-right text-3xl font-bold">PHÚ LỤC ĐỊCH</p>
+            <p class="text-justify">
+              Trích vở tuồng cổ "Hữu biến vô hình". Vở tuồng nói về việc dưới trần gian có nhiều yêu
+              nghiệt quấy phá, coi thường luân thường đạo lý. Ngọc Hoàng bèn sai một vị thiên tướng
+              xuống trần gian trừ yêu diệt ma, cứu độ chúng sinh. Dù gặp không ít khó khăn với vô
+              vàn yêu ma chước quỷ của bọn thiên nghiệt, cuối cùng thiên tướng cũng hoàn thành sứ
+              mệnh mà Ngọc Hoàng giao phó. Vở tuồng cổ nói về việc cái thiện luôn chiến thắng cái
+              ác, dù cái ác luôn hiện hữu và biến tấu không lường.
+            </p>
           </div>
           <iframe
             class="aspect-video w-full"

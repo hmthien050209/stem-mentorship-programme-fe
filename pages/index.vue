@@ -87,7 +87,7 @@
     >
       <NuxtImg
         src="/img/first-section-background.png"
-        class="h-full w-full object-cover"
+        class="h-full w-full bg-[#100D08] object-cover"
         alt="background"
         format="webp"
         placeholder
@@ -192,7 +192,7 @@
     <section
       id="fourthSection"
       ref="fourthSection"
-      class="flex h-screen w-screen flex-col items-center bg-[url('/img/fourth-section-background.svg')] bg-cover py-12"
+      class="flex h-[64rem] w-screen flex-col items-center bg-[url('/img/fourth-section-background.svg')] bg-cover py-12"
     >
       <div class="grid w-full grid-cols-3">
         <div class="mr-8 flex-1 border-b-3 border-b-white" />
@@ -205,7 +205,7 @@
           <LazyNuxtImg
             src="/img/dan-ca-quan-ho-hero.png"
             format="webp"
-            class="h-1/2 object-cover"
+            class="h-1/2 w-full object-cover"
             placeholder
           />
           <div
@@ -213,13 +213,11 @@
           />
 
           <div
-            class="absolute right-0 bottom-0 z-10 flex h-1/2 w-full flex-col items-center justify-center p-12 text-justify"
+            class="absolute right-0 bottom-0 z-10 flex h-1/2 w-full flex-col items-center justify-center gap-8 p-12 text-justify"
           >
-            <div class="font-playfair relative h-[160px] w-11/12 text-[52px]">
+            <div class="font-playfair relative h-28 w-11/12 text-5xl">
               <div class="absolute top-0 right-10">DÂN CA</div>
-              <span class="absolute bottom-0 left-0"
-                ><span class="text-[116px]">Q</span>UAN HỌ</span
-              >
+              <span class="absolute bottom-0 left-0"><span class="text-[7rem]">Q</span>UAN HỌ</span>
             </div>
             <div class="title italic">
               “Lời ca từ bến sông Kinh Bắc, vang vọng tình người tình quê”
@@ -228,9 +226,11 @@
         </NuxtLink>
 
         <NuxtLink to="/info/nha-nhac-cung-dinh" class="info-box">
-          <div class="z-20 mx-auto flex w-11/12 flex-col items-center justify-center text-center">
-            <span class="font-playfair text-[60px] leading-none">
-              <span class="text-[116px]">N</span><span class="text-[52px]">HÃ NHẠC</span> <br />
+          <div
+            class="z-20 mx-auto flex w-11/12 flex-col items-center justify-center gap-8 text-center"
+          >
+            <span class="font-playfair text-6xl leading-none">
+              <span class="text-[7rem]">N</span><span class="text-5xl">HÃ NHẠC</span> <br />
               CUNG ĐÌNH
             </span>
             <div class="title italic">“Tinh hoa âm nhạc cung đình giữa lòng di sản Huế”</div>
@@ -243,7 +243,7 @@
           <LazyNuxtImg
             src="/img/nha-nhac-cung-dinh-hero.png"
             format="webp"
-            class="absolute bottom-0 left-0 h-1/2 object-cover"
+            class="absolute bottom-0 left-0 h-1/2 w-full object-cover"
             placeholder
           />
         </NuxtLink>
@@ -252,7 +252,7 @@
           <LazyNuxtImg
             src="/img/don-ca-tai-tu-hero.png"
             format="webp"
-            class="h-1/2 object-cover"
+            class="h-1/2 w-full object-cover"
             placeholder
           />
           <div
@@ -260,11 +260,11 @@
           />
 
           <div
-            class="absolute right-0 bottom-0 z-10 flex h-1/2 w-full flex-col items-center justify-center p-8 text-justify"
+            class="absolute right-0 bottom-0 z-10 flex h-1/2 w-full flex-col items-center justify-center gap-8 p-8 text-justify"
           >
-            <div class="font-playfair relative h-52 w-80 text-[52px]">
-              <span class="absolute top-0 left-0 text-[60px]"
-                ><span class="text-[116px]">Đ</span>ỜN CA</span
+            <div class="font-playfair relative h-40 w-80 text-5xl">
+              <span class="absolute top-0 left-0 text-7xl"
+                ><span class="text-[7rem]">Đ</span>ỜN CA</span
               >
               <div class="absolute right-0 bottom-0">TÀI TỬ</div>
             </div>
