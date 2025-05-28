@@ -3,7 +3,7 @@
     <h1>Ý NGHĨA</h1>
     <ul>
       <li>
-        Âm nhạc truyền thống chính là nơi lưu giữ những giá trị di sản quý báu từ bao đời , đóng vai
+        Âm nhạc truyền thống chính là nơi lưu giữ những giá trị di sản quý báu từ bao đời, đóng vai
         trò vô cùng quan trọng trong việc bảo tồn và phát huy bản sắc văn hoá dân tộc. Âm nhạc
         truyền thống không chỉ mang giá trị giải trí mà còn chứa đựng những giá trị lịch sử lâu dài,
         ngôn ngữ đặc trưng và phong tục tập quán độc đáo.
