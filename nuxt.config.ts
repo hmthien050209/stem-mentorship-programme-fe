@@ -39,7 +39,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxtjs/sanity',
-    'nuxt-gtag',
     '@nuxt/scripts',
   ],
 
