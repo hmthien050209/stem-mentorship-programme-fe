@@ -12,6 +12,10 @@ export default defineNuxtConfig({
   // The most relevant GitHub issue is https://github.com/nuxt/nuxt/issues/32178
   ssr: false,
 
+  gtag: {
+    enabled: process.env.NODE_ENV === 'production',
+  },
+
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
@@ -19,6 +23,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxtjs/sanity',
+    'nuxt-gtag',
   ],
 
   app: {
