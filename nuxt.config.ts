@@ -12,8 +12,24 @@ export default defineNuxtConfig({
   // The most relevant GitHub issue is https://github.com/nuxt/nuxt/issues/32178
   ssr: false,
 
-  gtag: {
-    enabled: process.env.NODE_ENV === 'production',
+  $production: {
+    scripts: {
+      registry: {
+        googleAnalytics: true,
+      },
+    },
+  },
+
+  runtimeConfig: {
+    public: {
+      scripts: {
+        googleAnalytics: {
+          // .env
+          // NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID=<your-id>
+          id: '',
+        },
+      },
+    },
   },
 
   modules: [
@@ -24,6 +40,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/sanity',
     'nuxt-gtag',
+    '@nuxt/scripts',
   ],
 
   app: {
