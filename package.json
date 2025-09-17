@@ -26,7 +26,7 @@
     "animejs": "^4.0.2",
     "chart.js": "^4.4.9",
     "eslint": "^9.27.0",
-    "nuxt": "^3.17.4",
+    "nuxt": "^3.19.0",
     "tailwindcss": "^4.1.7",
     "vue": "^3.5.14",
     "vue-router": "^4.5.1"
